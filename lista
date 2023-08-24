@@ -893,62 +893,6 @@ https://dtvott-abc.akamaized.net/dash_live_1255/manifest.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=http://167.114.129.223/web/keys/dtvar.json
 https://channels123.futbolenvivo.xyz/stream/manifest.mpd?id=1057
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/FRyDpWz2/ver-directv-sports-en-vivo.png" group-title="DIRECTV 2", DIRECTV 2
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://exoplaydoo.000webhostapp.com/vercelapp/api/results.php?keyid=ab020a1710d630168de21698375a439c&key=235898cdb10b0cdba35ea2ce94fbb1fb
-https://1063-vos.dtvott.com/DASH/manifest.mpd
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/FRyDpWz2/ver-directv-sports-en-vivo.png" group-title="DIRECTV SPORT ARGENTINA", DIRECTV SPORT ARGENTINA
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://exoplaydoo.000webhostapp.com/vercelapp/api/results.php?keyid=bb0ecaa6ae62336197c64d4129c6a09d&key=cb0bba4522ffcd90a8b51541a0fcfae0
-https://1057-vos.dtvott.com/DASH/manifest.mpd
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/FRyDpWz2/ver-directv-sports-en-vivo.png" group-title="DIRECTV SPORT CHILE", DIRECTV SPORT CHILE
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://mute.mariabareiro.repl.co/HELLOWORL/directvchile.json
-https://dtvott-abc.akamaized.net/dash_live_1058/manifest.mpd
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/FRyDpWz2/ver-directv-sports-en-vivo.png" group-title="DIRECTV SPORT ECUADOR", DIRECTV SPORT ECUADOR
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://exoplaydoo.000webhostapp.com/vercelapp/api/results.php?keyid=7bdf77d921713bf492db95af8f97d291&key=f22b62635a18b9f678514cf18c77fd37
-https://1060-vos.dtvott.com/DASH/manifest.mpd
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/FRyDpWz2/ver-directv-sports-en-vivo.png" group-title="DIRECTV SPORT COLOMBIA", DIRECTV SPORT COLOMBIA
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://exoplaydoo.000webhostapp.com/vercelapp/api/results.php?keyid=2fa59463176f3dc2964b91b4f7ae1d7c&key=81d5b95cc9057d6b0f85c78e6f0e41e7
-https://1059-vos.dtvott.com/DASH/manifest.mpd
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/FRyDpWz2/ver-directv-sports-en-vivo.png" group-title="DIRECTV SPORT PERU", DIRECTV SPORT PERU
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://exoplaydoo.000webhostapp.com/vercelapp/api/results.php?keyid=5fb64d11355338b3bdf8b182d28eba1f&key=bfc4e9f3e355b82e11fc5ddfd313c3f2
-https://1061-vos.dtvott.com/DASH/manifest.mpd
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/FRyDpWz2/ver-directv-sports-en-vivo.png" group-title="DIRECTV SPORT URUGUAY", DIRECTV SPORT URUGUAY
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://exoplaydoo.000webhostapp.com/vercelapp/api/results.php?keyid=409459dd892532a0ae99947bd46b4e48&key=9e5a06e2803b02a6006d8c19d4738a35
-https://1062-vos.dtvott.com/DASH/manifest.mpd
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/FRyDpWz2/ver-directv-sports-en-vivo.png" group-title="DIRECTV SPORT EVENTOS", DIRECTV SPORT EVENTOS
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://exoplaydoo.000webhostapp.com/vercelapp/api/results.php?keyid=7ac8dd7d48545bc881091ee1bbecaf42&key=9787ea06df2f063245bbda4a738e51cc
-https://dtvott-abc.akamaized.net/dash_live_1066/manifest.mpd
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/jS23T437/directvplus.jpg" group-title="DIRECTV +", DIRECTV +
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://exoplaydoo.000webhostapp.com/keys/dtv+.json
-https://dtvott-abc.akamaized.net/dash_live_1071/manifest.mpd
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/B64ZjfTY/dsportsmotor.jpg" group-title="DIRECTV SPORTS MOTOR", DIRECTV SPORTS MOTOR
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://mute.mariabareiro.repl.co/HELLOWORL/dsm.json
-https://dtvott-abc.akamaized.net/dash_live_1279/manifest.mpd
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/857GJkFb/DSPORTS-FIGHT.png" group-title="DIRECTV SPORTS FIGHT", DIRECTV SPORTS FIGHT
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://mute.mariabareiro.repl.co/HELLOWORL/dsf.json
-https://dtvott-abc.akamaized.net/dash_live_1259/manifest.mpd
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/bv9J6hSW/image.jpg" group-title="ONEDIRECTV 1", ONEDIRECTV 1
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://exoplaydoo.000webhostapp.com/vercelapp/api/results.php?keyid=d677a19db3a05a019d8683b9250cbc0f&key=e2756e96d7d9d63729b645a6139cb513
-https://dtvott-abc.akamaized.net/dash_live_1065/manifest.mpd
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/bv9J6hSW/image.jpg" group-title="ONEDIRECTV 2", ONEDIRECTV 2
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://exoplaydoo.000webhostapp.com/vercelapp/api/results.php?keyid=a8cf52be0eb358c9a8bfcd1fc94d7cb5&key=834c7082d28d85f5da38dde949b66c9a
-https://dtvott-cbc.akamaized.net/dash_live_1069/manifest.mpd
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/bv9J6hSW/image.jpg" group-title="ONEDIRECTV 3", ONEDIRECTV 3
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://exoplaydoo.000webhostapp.com/vercelapp/api/results.php?keyid=8f80dcd366285395b267c7ecbe7ad4b5&key=654f9c425fd363496b1e6bc97bd4444e
-https://dtvott-abc.akamaized.net/dash_live_1067/manifest.mpd
 #EXTINF:-1 tvg-logo="https://th.bing.com/th/id/OIP.67LyxXZUbdBDQ5iXEfnNAgHaEK?w=258&h=180&c=7&r=0&o=5&pid=1.7" group-title="SPORTV 1", SPORTV 1
 http://testo.app-host11.xyz:2095/live/Tourobox1-F6Mj3u4Z8F/Ri369CisDQ/396.ts
 #EXTINF:-1 tvg-logo="https://th.bing.com/th/id/OIP.67LyxXZUbdBDQ5iXEfnNAgHaEK?w=258&h=180&c=7&r=0&o=5&pid=1.7" group-title="SPORTV 2", SPORTV 2
