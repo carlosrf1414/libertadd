@@ -1,4 +1,4 @@
-#EXTM3U
+#EXTM3U refresh="1"
 #EXTINF:-1 tvg-logo="https://clarovideocdn6.clarovideo.net/CVPERU/PELICULAS/CANALCLAROHD/EXPORTACION_WEB/SS/CANALCLAROHD_t-290x163.png" tvg-group="CANAL CLARO HD", CANAL CLARO HD
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent="Mozilla/5.0 (X11; Linux aarch64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.100 Safari/537.36 CrKey/1.40.156414"
 https://pylocaltstvhls.lcdn.clarotv.com.py/Content/HLS_HLS_FK/Live/channel(CANAL_CLARO_HD)/index.m3u8
