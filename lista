@@ -901,26 +901,6 @@ http://testo.app-host11.xyz:2095/live/Tourobox1-VTpgsnOoHj/28QmTPho90/397.ts
 http://testo.app-host11.xyz:2095/live/Tourobox1-VTpgsnOoHj/28QmTPho90/398.ts
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/tgYS5g2T/golperu-logo-horizontal1-1.jpg" group-title="GOL PERU", GOL PERU
 https://v3.playerlatino.live/stream/m3u8/686.m3u8
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/BZzs0315/premiere.jpg" group-title="PREMIERE", PREMIERE
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://mute.mariabareiro.repl.co/HELLOWORL/premiere.json
-https://dtvott-jbc.akamaized.net/dash_live_0079/manifest.mpd
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/RZhcytD5/45857537421cf0f7c7b1aab9b2ea6f9b.jpg" group-title="PREMIERE 2", PREMIERE 2
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://mute.mariabareiro.repl.co/HELLOWORL/pre2.json
-https://dtvott-jbc.akamaized.net/dash_live_0080/manifest.mpd?da=0&country=UY&accountType=OTT
-#EXTINF:-1 tvg-logo="https://d18o29lhcg4kda.cloudfront.net/fit-in/3200x2400/Y2gwMTAwMDAwMDAwMDM2X2xpbmVhcl9jaGFubmVsX2Jy_11002_LOGO_3200x2400.png?timestamp=1685587106024" group-title="Premiere 3", Premiere 3
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://mute.mariabareiro.repl.co/HELLOWORL/pre8.json
-https://dtvott-jbc.akamaized.net/dash_live_0113/manifest.mpd?da=0&country=UY&accountType=OTT
-#EXTINF:-1 tvg-logo="https://d18o29lhcg4kda.cloudfront.net/fit-in/3200x2400/Y2gwMTAwMDAwMDAwMDM2X2xpbmVhcl9jaGFubmVsX2Jy_11002_LOGO_3200x2400.png?timestamp=1685587106024" group-title="Premiere 7", Premiere 7
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://mute.mariabareiro.repl.co/HELLOWORL/pre3.json
-https://dtvott-jbc.akamaized.net/dash_live_0112/manifest.mpd?da=0&country=UY&accountType=OTT
-#EXTINF:-1 tvg-logo="https://d18o29lhcg4kda.cloudfront.net/fit-in/3200x2400/Y2gwMTAwMDAwMDAwMDM2X2xpbmVhcl9jaGFubmVsX2Jy_11002_LOGO_3200x2400.png?timestamp=1685587106024" group-title="Premiere 8", Premiere 8
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://mute.mariabareiro.repl.co/HELLOWORL/prem8.json
-https://dtvott-jbc.akamaized.net/dash_live_0113/manifest.mpd?da=0&country=UY&accountType=OTT
 #EXTINF:-1 tvg-logo="https://d18o29lhcg4kda.cloudfront.net/fit-in/3200x2400/Y2gwMTAwMDAwMDAwMDM2X2xpbmVhcl9jaGFubmVsX2Jy_11002_LOGO_3200x2400.png?timestamp=1685587106024" group-title="Premiere Clubes", Premiere Clubes
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://mute.mariabareiro.repl.co/HELLOWORL/premc.json
