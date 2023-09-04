@@ -70,6 +70,17 @@ https://pylocaltstvhls.lcdn.clarotv.com.py/Content/HLS_HLS_FK/Live/channel(RPC)/
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent="Mozilla/5.0 (X11; Linux aarch64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.100 Safari/537.36 CrKey/1.40.156414"
 https://pylocaltstvhls.lcdn.clarotv.com.py/Content/HLS_HLS_FK/Live/channel(SNT)/index.m3u8
 
+
+#EXTINF:-1 tvg-logo="https://i.ibb.co/CVr3QGv/fe7f8998db53725ac48f0deedc773692-anniversary-logo-visual-identity.jpg" group-title="GLOBO BRASIL", GLOBO BRASIL
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://dl.dropbox.com/scl/fi/37ermryrinil0et4hm7pa/KEY.GLOBO.json?rlkey=5vlhvibqwcb5fa6nidcwy4inv&dl=0
+https://dtvott-jbc.akamaized.net/dash_live_0095/manifest.mpd
+
+#EXTINF:-1 tvg-logo="https://i.ibb.co/CVr3QGv/fe7f8998db53725ac48f0deedc773692-anniversary-logo-visual-identity.jpg" group-title="SBT BRASIL", SBT BRASIL
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent="Mozilla/5.0 (X11; Linux aarch64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.100 Safari/537.36 CrKey/1.40.156414"
+http://wz4.dnip.com.br/bemtv/bemtv.sdp/playlist.m3u8
+
+
 #EXTINF:-1 tvg-logo="https://clarovideocdn2.clarovideo.net/CVPERU/PELICULAS/VENUSMEDIA/EXPORTACION_WEB/SS/VENUSMEDIA_t-290x163.png" tvg-group="VENUS MEDIA", VENUS MEDIA
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent="Mozilla/5.0 (X11; Linux aarch64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.100 Safari/537.36 CrKey/1.40.156414"
 https://pylocaltstvhls.lcdn.clarotv.com.py/Content/HLS_HLS_FK/Live/channel(VENUS_MEDIA)/index.m3u8
