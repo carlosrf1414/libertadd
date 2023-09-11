@@ -2,22 +2,12 @@
 #EXTINF:-1 tvg-logo="https://clarovideocdn6.clarovideo.net/CVPERU/PELICULAS/CANALCLAROHD/EXPORTACION_WEB/SS/CANALCLAROHD_t-290x163.png" tvg-group="CANAL CLARO HD", CANAL CLARO HD
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent="Mozilla/5.0 (X11; Linux aarch64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.100 Safari/537.36 CrKey/1.40.156414"
 https://pylocaltstvhls.lcdn.clarotv.com.py/Content/HLS_HLS_FK/Live/channel(CANAL_CLARO_HD)/index.m3u8
-
 #EXTINF:-1 tvg-logo="https://clarovideocdn2.clarovideo.net/CVPERU/PELICULAS/PARAGUAYTV/EXPORTACION_WEB/SS/PARAGUAYTV_t-290x163.png" tvg-group="PARAGUAY TV", PARAGUAY TV
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent="Mozilla/5.0 (X11; Linux aarch64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.100 Safari/537.36 CrKey/1.40.156414"
 https://pylocaltstvhls.lcdn.clarotv.com.py/Content/HLS_HLS_FK/Live/channel(PARAGUAY_TV)/index.m3u8
-
-
-
-
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/QxXn43pS/ver-tigo-sports-en-vivo.jpg" tvg-group="TIGO SPORTS 3", TIGO SPORTS 3
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent="Mozilla/5.0 (X11; Linux aarch64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.100 Safari/537.36 CrKey/1.40.156414"
 https://ssh101.bozztv.com/ssh101/tvlat/chunks.m3u8
-
-
-
-
-
 #EXTINF:-1 tvg-logo="https://i.ibb.co/CVr3QGv/fe7f8998db53725ac48f0deedc773692-anniversary-logo-visual-identity.jpg" group-title="GLOBO BRASIL", GLOBO BRASIL
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://dl.dropbox.com/scl/fi/37ermryrinil0et4hm7pa/KEY.GLOBO.json?rlkey=5vlhvibqwcb5fa6nidcwy4inv&dl=0
@@ -26,10 +16,6 @@ https://dtvott-jbc.akamaized.net/dash_live_0095/manifest.mpd
 #EXTINF:-1 tvg-logo="https://i.ibb.co/CVr3QGv/fe7f8998db53725ac48f0deedc773692-anniversary-logo-visual-identity.jpg" group-title="SBT BRASIL", SBT BRASIL
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent="Mozilla/5.0 (X11; Linux aarch64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.100 Safari/537.36 CrKey/1.40.156414"
 http://wz4.dnip.com.br/bemtv/bemtv.sdp/playlist.m3u8
-
-
-
-
 
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/JtVXTcGY/tcm.png" group-title="TCM", TCM
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -494,12 +480,6 @@ https://dtvott-abc.akamaized.net/dash_live_1255/manifest.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=http://167.114.129.223/web/keys/dtvar.json
 https://channels123.futbolenvivo.xyz/stream/manifest.mpd?id=1057
-#EXTINF:-1 tvg-logo="https://th.bing.com/th/id/OIP.67LyxXZUbdBDQ5iXEfnNAgHaEK?w=258&h=180&c=7&r=0&o=5&pid=1.7" group-title="SPORTV 1", SPORTV 1
-http://testo.app-host11.xyz:2095/live/Tourobox1-F6Mj3u4Z8F/Ri369CisDQ/396.ts
-#EXTINF:-1 tvg-logo="https://th.bing.com/th/id/OIP.67LyxXZUbdBDQ5iXEfnNAgHaEK?w=258&h=180&c=7&r=0&o=5&pid=1.7" group-title="SPORTV 2", SPORTV 2
-http://testo.app-host11.xyz:2095/live/Tourobox1-VTpgsnOoHj/28QmTPho90/397.ts
-#EXTINF:-1 tvg-logo="https://th.bing.com/th/id/OIP.67LyxXZUbdBDQ5iXEfnNAgHaEK?w=258&h=180&c=7&r=0&o=5&pid=1.7" group-title="SPORTV 3", SPORTV 3
-http://testo.app-host11.xyz:2095/live/Tourobox1-VTpgsnOoHj/28QmTPho90/398.ts
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/tgYS5g2T/golperu-logo-horizontal1-1.jpg" group-title="GOL PERU", GOL PERU
 https://v3.playerlatino.live/stream/m3u8/686.m3u8
 #EXTINF:-1 tvg-logo="https://d18o29lhcg4kda.cloudfront.net/fit-in/3200x2400/Y2gwMTAwMDAwMDAwMDM2X2xpbmVhcl9jaGFubmVsX2Jy_11002_LOGO_3200x2400.png?timestamp=1685587106024" group-title="Premiere Clubes", Premiere Clubes
@@ -552,7 +532,7 @@ https://dtvott-abc.akamaized.net/dash_live_1271/manifest.mpd
 https://dtvott-abc.akamaized.net/dash_live_1272/manifest.mpd
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/9XdsQq0B/DEPOR-TV.png" group-title="DEPORTV", DEPORTV
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://mute.mariabareiro.repl.co/HELLOWORL/deportv.json
+#KODIPROP:inputstream.adaptive.license_key=https://vercel-php-clearkey-hex-base64-json.vercel.app/api/results.php?keyid=f362097815892a4b83950f1d106ff0b2&key=4349e42e81c31a8389f4a42fcd298928
 https://edge-live16-sl.cvattv.com.ar/live/c3eds/DeporTVHD/SA_Live_dash_enc_2A/DeporTVHD.mpd
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/FRMfWB30/AFIZZIONADOS.png" group-title="AFICIONADOS", AFICIONADOS
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -570,10 +550,6 @@ https://edge-live16-sl.cvattv.com.ar/live/c6eds/Golf_Channel/SA_Live_dash_enc_2A
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://mute.mariabareiro.repl.co/HELLOWORL/nba.json
 https://edge-live16-sl.cvattv.com.ar/live/c6eds/NBA_TV/SA_Live_dash_enc_2A/NBA_TV.mpd
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/bwZgWNd0/ver-depor-tv-en-vivo.png" group-title="DEPORTV", DEPORTV
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://mute.mariabareiro.repl.co/HELLOWORL/deportv.json
-https://edge-live16-sl.cvattv.com.ar/live/c3eds/DeporTVHD/SA_Live_dash_enc_2A/DeporTVHD.mpd
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/x12ZDjn4/images.png" group-title="TNT SPORT HD", TNT SPORT HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://exoplaydoo.000webhostapp.com/keys/tntsporthd.json
