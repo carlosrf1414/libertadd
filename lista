@@ -5,9 +5,9 @@ https://pylocaltstvhls.lcdn.clarotv.com.py/Content/HLS_HLS_FK/Live/channel(CANAL
 #EXTINF:-1 tvg-logo="https://clarovideocdn2.clarovideo.net/CVPERU/PELICULAS/PARAGUAYTV/EXPORTACION_WEB/SS/PARAGUAYTV_t-290x163.png" tvg-group="PARAGUAY TV", PARAGUAY TV
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent="Mozilla/5.0 (X11; Linux aarch64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.100 Safari/537.36 CrKey/1.40.156414"
 https://pylocaltstvhls.lcdn.clarotv.com.py/Content/HLS_HLS_FK/Live/channel(PARAGUAY_TV)/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/QxXn43pS/ver-tigo-sports-en-vivo.jpg" tvg-group="TIGO SPORTS 3", TIGO SPORTS 3
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/QxXn43pS/ver-tigo-sports-en-vivo.jpg" tvg-group="TIGO SPORTS 3", TIGO SPORTS PY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent="Mozilla/5.0 (X11; Linux aarch64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.100 Safari/537.36 CrKey/1.40.156414"
-https://ssh101.bozztv.com/ssh101/tvlat/chunks.m3u8
+https://testphp07.alwaysdata.net/universo/okru.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/CVr3QGv/fe7f8998db53725ac48f0deedc773692-anniversary-logo-visual-identity.jpg" group-title="GLOBO BRASIL", GLOBO BRASIL
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://dl.dropbox.com/scl/fi/37ermryrinil0et4hm7pa/KEY.GLOBO.json?rlkey=5vlhvibqwcb5fa6nidcwy4inv&dl=0
@@ -432,10 +432,7 @@ https://edge-live12-sl.cvattv.com.ar/live/c6eds/HBO_2/SA_Live_dash_enc/HBO_2.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://mute.mariabareiro.repl.co/HELLOWORL/hbox.json
 https://edge-live11-sl.cvattv.com.ar/live/c6eds/HBO_Extreme/SA_Live_dash_enc_2A/HBO_Extreme.mpd
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/QxXn43pS/ver-tigo-sports-en-vivo.jpg" group-title="TIGO SPORTS 2", TIGO SPORTS 2
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=http://pedorro.duckdns.org/goti1/widevine.php
-http://pedorro.duckdns.org/goti1/3z0a2bhbsygOhJ3csHjxcn.mpd
+
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/YqQ0Ls1W/13934-original-19799-original-TN-FAMILY.jpg" group-title="HBO FAMILY", HBO FAMILY
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://mute.mariabareiro.repl.co/HELLOWORL/hbof.json
@@ -486,10 +483,7 @@ https://v3.playerlatino.live/stream/m3u8/686.m3u8
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://mute.mariabareiro.repl.co/HELLOWORL/premc.json
 https://dtvott-jbc.akamaized.net/dash_live_0079/manifest.mpd?da=0&country=UY&accountType=OTT
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/QxXn43pS/ver-tigo-sports-en-vivo.jpg" group-title="TIGO SPORTS 2", TIGO SPORTS 1
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=http://pedorro.duckdns.org/goti2/widevine.php
-http://pedorro.duckdns.org/goti2/6ky60xwxZmSsxRndFNMSk7.mpd
+
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/02BdYRZz/ver-espn-premium-en-vivo.jpg" group-title="ESPN PREMIUM", ESPN PREMIUM
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://exoplaydoo.000webhostapp.com/vercelapp/api/results.php?keyid=0f48f9e79f54b38d619fd25565c4d14b&key=02828e6346a46e61e965202cd8787e3a
