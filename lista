@@ -17,6 +17,9 @@ https://dtvott-jbc.akamaized.net/dash_live_0095/manifest.mpd
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent="Mozilla/5.0 (X11; Linux aarch64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.100 Safari/537.36 CrKey/1.40.156414"
 http://wz4.dnip.com.br/bemtv/bemtv.sdp/playlist.m3u8
 
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuaI07o-Y86Np4zdDb_gw1Mhx1bqFa49cUDQ&usqp=CAU" group-title="TIGO SPORTS", TIGO SPORTS
+https://testphp07.alwaysdata.net/vimeofutplay/extraccion.m3u8
+
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/JtVXTcGY/tcm.png" group-title="TCM", TCM
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://exoplaydoo.000webhostapp.com/vercelapp/api/results.php?keyid=a5f44a5e30714cf3bcee7c7f15a08b4e&key=c3c141ae941ab9750339c3af45a65ce2
