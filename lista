@@ -8,10 +8,7 @@ https://pylocaltstvhls.lcdn.clarotv.com.py/Content/HLS_HLS_FK/Live/channel(PARAG
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/QxXn43pS/ver-tigo-sports-en-vivo.jpg" tvg-group="TIGO SPORTS 3", TIGO SPORTS PY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent="Mozilla/5.0 (X11; Linux aarch64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.100 Safari/537.36 CrKey/1.40.156414"
 https://testphp07.alwaysdata.net/universo/okru.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/CVr3QGv/fe7f8998db53725ac48f0deedc773692-anniversary-logo-visual-identity.jpg" group-title="GLOBO BRASIL", GLOBO BRASIL
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://dl.dropbox.com/scl/fi/37ermryrinil0et4hm7pa/KEY.GLOBO.json?rlkey=5vlhvibqwcb5fa6nidcwy4inv&dl=0
-https://dtvott-jbc.akamaized.net/dash_live_0095/manifest.mpd
+
 
 #EXTINF:-1 tvg-logo="https://i.ibb.co/CVr3QGv/fe7f8998db53725ac48f0deedc773692-anniversary-logo-visual-identity.jpg" group-title="SBT BRASIL", SBT BRASIL
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent="Mozilla/5.0 (X11; Linux aarch64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.100 Safari/537.36 CrKey/1.40.156414"
@@ -460,32 +457,13 @@ https://cdn.cvattv.com.ar/live/c7eds/HBO_POP/SA_Live_dash_enc/HBO_POP.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://mute.mariabareiro.repl.co/utv.json
 https://cdn.cvattv.com.ar/live/c6eds/Universal_Channel_HD/SA_Live_dash_enc_wl/Universal_Channel_HD.mpd
-#EXTINF:-1 tvg-logo="http://static.tvar.io/imagenes/uncomedy.png" group-title="UNIVERSAL COMEDY", UNIVERSAL COMEDY
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://dl.dropbox.com/scl/fi/8gs02i6on9vbrkrojyba1/KEY.UNIVERSAL.COMEDY.json?rlkey=z6h9uqng2opo8a6m8ifwe9ncn&dl=0
-http://dtvott-abc.akamaized.net/dash_live_1252/manifest.mpd
-#EXTINF:-1 tvg-logo="http://static.tvar.io/imagenes/uncrime.png" group-title="UNIVERSAL CRIME", UNIVERSAL CRIME
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://dl.dropbox.com/scl/fi/oqcshr1efisq0lbb79w2p/KEY.UNIVERSAL.CRIME.json?rlkey=ab50erzuvsqyjn26fdx9msfpf&dl=0
-http://dtvott-abc.akamaized.net/dash_live_1254/manifest.mpd
-#EXTINF:-1 tvg-logo="http://static.tvar.io/imagenes/unpremiere.png" group-title="UNIVERSAL PREMIERE", UNIVERSAL PREMIERE
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://dl.dropbox.com/scl/fi/robmh5ubm9huay6scqpgh/KEY.UNIVERSAL.PREMIERE.json?rlkey=g2sj40pegtoarudvbi88nf8jg&dl=0
-http://dtvott-abc.akamaized.net/dash_live_1256/manifest.mpd
-#EXTINF:-1 tvg-logo="http://static.tvar.io/imagenes/unreality.png" group-title="UNIVERSAL REALITY", UNIVERSAL REALITY
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://dl.dropbox.com/scl/fi/kgbkq3i9w3o9jm7avlxxa/KEY.UNIVERSAL.REALITY.json?rlkey=wpuj0f8y5agjfhfwu45bdx6ct&dl=0
-https://dtvott-abc.akamaized.net/dash_live_1255/manifest.mpd
+
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/FRyDpWz2/ver-directv-sports-en-vivo.png" group-title="DIRECTV", DIRECTV
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=http://167.114.129.223/web/keys/dtvar.json
 https://channels123.futbolenvivo.xyz/stream/manifest.mpd?id=1057
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/tgYS5g2T/golperu-logo-horizontal1-1.jpg" group-title="GOL PERU", GOL PERU
 https://v3.playerlatino.live/stream/m3u8/686.m3u8
-#EXTINF:-1 tvg-logo="https://d18o29lhcg4kda.cloudfront.net/fit-in/3200x2400/Y2gwMTAwMDAwMDAwMDM2X2xpbmVhcl9jaGFubmVsX2Jy_11002_LOGO_3200x2400.png?timestamp=1685587106024" group-title="Premiere Clubes", Premiere Clubes
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://mute.mariabareiro.repl.co/HELLOWORL/premc.json
-https://dtvott-jbc.akamaized.net/dash_live_0079/manifest.mpd?da=0&country=UY&accountType=OTT
 
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/02BdYRZz/ver-espn-premium-en-vivo.jpg" group-title="ESPN PREMIUM", ESPN PREMIUM
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -519,14 +497,6 @@ https://cdn.cvattv.com.ar/live/c3eds/FoxSports2HD/SA_Live_dash_enc/FoxSports2HD.
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://mute.mariabareiro.repl.co/HELLOWORL/fs3.json
 https://cdn.cvattv.com.ar/live/c3eds/FoxSports3HD/SA_Live_dash_enc/FoxSports3HD.mpd
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/XqHsMGjt/liga1.jpg" group-title="LIGA 1", LIGA 1
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://mute.mariabareiro.repl.co/HELLOWORL/liga1.json
-https://dtvott-abc.akamaized.net/dash_live_1271/manifest.mpd
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/pLTBjYQj/LIGA-1-MAX.png" group-title="LIGA 1 MAX", LIGA 1 MAX
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://mute.mariabareiro.repl.co/HELLOWORL/liga2.json
-https://dtvott-abc.akamaized.net/dash_live_1272/manifest.mpd
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/9XdsQq0B/DEPOR-TV.png" group-title="DEPORTV", DEPORTV
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://vercel-php-clearkey-hex-base64-json.vercel.app/api/results.php?keyid=f362097815892a4b83950f1d106ff0b2&key=4349e42e81c31a8389f4a42fcd298928
@@ -704,22 +674,7 @@ http://stitcher-ipv4.pluto.tv/v1/stitch/embed/hls/channel/61f94a2866401100074e9d
 https://unlimited2-cl-isp.dps.live/lared/lared.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/yYgFQVRv/Logoucvtv2018.png" group-title="UCV", UCV
 https://unlimited2-cl-isp.dps.live/ucvtv2/ucvtv2.smil/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/15Yv2y94/image.jpg" group-title="TV+", TV+
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://mute.mariabareiro.repl.co/tvm.json
-https://dtvott-abc.akamaized.net/dash_live_1236/manifest.mpd
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/hGyhx5rN/image.png" group-title="TVN", TVN
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://mute.mariabareiro.repl.co/tvn.json
-https://dtvott-abc.akamaized.net/dash_live_1221/manifest.mpd
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/4xQ2ZrbC/85443928933611eb87a3e6eaa16af9e2.png" group-title="NTN24", NTN24
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://mute.mariabareiro.repl.co/ntn.json
-https://dtvott-abc.akamaized.net/dash_live_1176/manifest.mpd
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/MKyBXBPR/el-tiempo-television-logo-F00557386-D-seeklogo-com.png" group-title="El Tiempo Televisión", El Tiempo Televisión
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://mute.mariabareiro.repl.co/et.json
-https://dtvott-cbc.akamaized.net/dash_live_1094/manifest.mpd
+
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/50Ww0mBh/Portada-En-Vivo-Mobile-2.jpg" group-title="Señal Colombia", Señal Colombia
 https://streaming.rtvc.gov.co/TV_Senal_Colombia_live/smil:live.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/RhcbPR99/image.jpg" group-title="Tele Pacífico", Tele Pacífico
@@ -734,10 +689,7 @@ https://stream.logicideas.media/canaltrece-live/smil:live.smil/playlist.m3u8
 https://stream.logicideas.media/canaltreceplus-live/smil:live1plus.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/g0kgPhFy/COLOMBIA.png" group-title="TV COLOMBIA", TV COLOMBIA
 https://d1qovwsteln4u.cloudfront.net/hls/tvc.m3u8
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/4xQ2ZrbC/85443928933611eb87a3e6eaa16af9e2.png" group-title="NTN24", NTN24
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://mute.mariabareiro.repl.co/ntn.json
-https://dtvott-abc.akamaized.net/dash_live_1176/manifest.mpd
+
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/G2DG032J/image.png" group-title="CANAL 7", CANAL 7
 https://customer-qczi39xffvq35rae.cloudflarestream.com/f41c1d91e17809daf3bc4a6c212680b7/manifest/video.m3u8?parentOrigin=https%3A%2F%2Fwww.ecuadortv.ec
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/90Y4VJ7J/TC-Televisi-n-new-logo-2020.png" group-title="TC", TC
