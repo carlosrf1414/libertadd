@@ -1,13 +1,13 @@
 #EXTM3U refresh="0.01"
 
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/QxXn43pS/ver-tigo-sports-en-vivo.jpg" TIGO SPORTS PY
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/QxXn43pS/ver-tigo-sports-en-vivo.jpg", TIGO SPORTS PY
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://vercel-php-clearkey-hex-base64-json.vercel.app/api/results.php?keyid=1c62a216a5fe423f959cb1ca02f62d83&key=54f2fdc83c1da33cd9269bf21e08218c
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=MiBot/1.0 (PHP/7.4)
 https://worker-flow.mcdstore.workers.dev/index.mpd
 
 
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/QxXn43pS/ver-tigo-sports-en-vivo.jpg" TIGO SPORTS PY 2
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/QxXn43pS/ver-tigo-sports-en-vivo.jpg", TIGO SPORTS PY 2
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://vercel-php-clearkey-hex-base64-json.vercel.app/api/results.php?keyid=49b2c0e7037042b2aff9f064e0bb3311&key=83849e30adf85440550292693147fbf7
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=MiBot/1.0 (PHP/7.4)
