@@ -1,16 +1,29 @@
 #EXTM3U refresh="0.01"
 
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/QxXn43pS/ver-tigo-sports-en-vivo.jpg" tvg-group="TIGO SPORTS 3", TIGO SPORTS PY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent="Mozilla/5.0 (X11; Linux aarch64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.100 Safari/537.36 CrKey/1.40.156414"
-https://xtream.mcdstore.store/stream/my_channels/eventi/master.m3u8?u=sky&p=bbb8fae206ff7742bbd50b59946ba705a29fcf4da95b3b38a04e629c3242473d
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/QxXn43pS/ver-tigo-sports-en-vivo.jpg" TIGO SPORTS PY
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://vercel-php-clearkey-hex-base64-json.vercel.app/api/results.php?keyid=1c62a216a5fe423f959cb1ca02f62d83&key=54f2fdc83c1da33cd9269bf21e08218c
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=MiBot/1.0 (PHP/7.4)
+https://worker-flow.mcdstore.workers.dev/index.mpd
+
+
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/QxXn43pS/ver-tigo-sports-en-vivo.jpg" TIGO SPORTS PY 2
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://vercel-php-clearkey-hex-base64-json.vercel.app/api/results.php?keyid=49b2c0e7037042b2aff9f064e0bb3311&key=83849e30adf85440550292693147fbf7
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=MiBot/1.0 (PHP/7.4)
+https://woekerd250.mcdstore.workers.dev/index.mpd
+
+
+
+
+
+
 
 
 #EXTINF:-1 tvg-logo="https://i.ibb.co/CVr3QGv/fe7f8998db53725ac48f0deedc773692-anniversary-logo-visual-identity.jpg" group-title="SBT BRASIL", SBT BRASIL
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent="Mozilla/5.0 (X11; Linux aarch64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.100 Safari/537.36 CrKey/1.40.156414"
 http://wz4.dnip.com.br/bemtv/bemtv.sdp/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuaI07o-Y86Np4zdDb_gw1Mhx1bqFa49cUDQ&usqp=CAU" group-title="TIGO SPORTS", TIGO SPORTS PY 2
-https://xtream.mcdstore.store/stream/my_channels/eventi17/master.m3u8?u=sky&p=bbb8fae206ff7742bbd50b59946ba705a29fcf4da95b3b38a04e629c3242473d
 
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/JtVXTcGY/tcm.png" group-title="TCM", TCM
 #KODIPROP:inputstream.adaptive.license_type=clearkey
