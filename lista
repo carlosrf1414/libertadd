@@ -3,13 +3,13 @@
 #EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkYOVIo59NZwPcHlJYYItJ-gg7jKB4HbtHTw&s" group-title="TIGO SPORTS SOLO EVENTOS", SOLO EVENTOS 1 FHD HD SD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=1c62a216a5fe423f959cb1ca02f62d83:54f2fdc83c1da33cd9269bf21e08218c
-https://dr.jellyfin.es/san_edge.mpd
+https://dr.jellyfin.es/sam_edge.mpd
 
 
 #EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkYOVIo59NZwPcHlJYYItJ-gg7jKB4HbtHTw&s" group-title="TIGO SPORTS SOLO EVENTOS", SOLO EVENTOS 2 FHD HD SD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=49b2c0e7037042b2aff9f064e0bb3311:83849e30adf85440550292693147fbf7
-https://woekerd250.cdn-s-lb2.workers.dev/index.mpd
+https://dr.jellyfin.es/san01_edge.mpd
 
 
 #EXTINF:-1 tvg-logo="https://static.flow.com.ar/images/7917/CH_LOGO/60/40/0/0/60910208076515.png" group-title="EVENTOS FLOW HD", EVENTOS HD 1
