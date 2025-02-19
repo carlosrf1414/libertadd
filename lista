@@ -838,6 +838,11 @@ https://cdn.cvattv.com.ar/live/c3eds/Canal7_Bahia_Blanca/SA_Live_dash_enc/Canal7
 #KODIPROP:inputstream.adaptive.license_key=2b21c8fa9a329cce311a4c4a4aa996a1:cc23ea1fb32629f9e1f48c8deeae3e5b
 https://cdn.cvattv.com.ar/live/c7eds/TyCSport/SA_Live_dash_enc/TyCSport.mpd
 
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/2/2e/NBC_Universo_logo.svg" group-title="⚽ DEPORTES ", UNIVERSO NBC
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=a42669eafed7349499aab7df588b3ccf:0fbff143ebd097060a377e4ade033288
+https://fsly.stream.peacocktv.com/Content/CMAF_OL1-CTR-4s-v2/Live/channel(universo-east)/master.mpd
+
 #EXTINF:-1 tvg-logo="https://logowik.com/content/uploads/images/tyc-sports9267.logowik.com.webp" group-title="⚽ DEPORTES", TYC SPORT INTERNACIONAL
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=58e1ebe75d944f6a98ea67b1c7c0a572:1c311b069dbce31ce8e62a6e7e2433eb
