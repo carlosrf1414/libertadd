@@ -2,6 +2,27 @@
 #EXTM3U url-tvg="https://www.open-epg.com/files/argentina2.xml.gz"
 
 
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={"b52a7fa91fb031a3d6f2a505414b6fcd":"a655a22f9c0a66574b5d95dee212fbf9"}
+#EXTINF:-1 tvg-logo="https://cdn.latam.tivoservice.com/images/static/logos//112x32/563.png" group-title="DEPORTES PARAGUAY 24/7",TIGO SPORTS 1
+https://sam-py-edge05.tigo.com.py/VMX4_widevine/rolling-buffer/TigoSportsHD/TigoSportsHD/transmux/index.m3u8?ccur_fmt_type=fmp4
+
+
+
+
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={"a8d8bfb76315e4fc6ba1328e1d8870bd":"eb27c40de4c406980e473fb6233fc897"}
+#EXTINF:-1 group-title="DEPORTES PARAGUAY 24/7",TIGO SPORTS PLUS 24/7
+https://sam-py-edge05.tigo.com.py/VMX4_widevine/rolling-buffer/TigoSportsPlusHD/TigoSportsPlusHD/transmux/index.m3u8?ccur_fmt_type=fmp4
+
+
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={"f62e93559765dfa6a89d2842b2b6d64a":"9f6a8cf0bcb1d17ce79ea93d0d9c3d83"}
+#EXTINF:-1 tvg-logo="https://cdn.latam.tivoservice.com/images/static/logos//112x32/579.png" group-title="DEPORTES PARAGUAY 24/7",TIGO SPORTS PLUS 24/7
+https://sam-py-edge05.tigo.com.py/VMX4_widevine/rolling-buffer/TigoSports3HDPY/TigoSports3HDPY/transmux/index.m3u8?ccur_fmt_type=fmp4
+
+
+
 
 #EXTINF:-1 tvg-id="channel-id" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCV8ylO8tcnV_u96yTcp4SS100-FKMfi42Dw&s" group-title="🇵🇾Tigo Sports", Tigo Sports 1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
