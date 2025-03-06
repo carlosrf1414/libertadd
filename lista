@@ -3,15 +3,6 @@
 
 #EXTM3U x-tvg-url=""
 
-#EXTINF:1 group-title="🇵🇾Tigo Sports" tvg-id="localhost/tigo" tvg-logo="https://cdn.latam.tivoservice.com/images/static/logos/112x32/548.png" provider="localhost" provider-logo="" provider-type="iptv",TIGO+ 24/7
-https://localhost.apppelis.me/stream/localhost/tigo/master.m3u8?u=localhost&p=9f7cb373f6c1e15ba57b53bf99f58ca51f768afbf968cdbb8b21d0e977eb9dae
-
-#EXTINF:2 group-title="🇵🇾Tigo Sports" tvg-id="localhost/tigo1" tvg-logo="https://cdn.latam.tivoservice.com/images/static/logos/112x32/563.png" provider="localhost" provider-logo="" provider-type="iptv",TIGO1 24/7
-https://localhost.apppelis.me/stream/localhost/tigo1/master.m3u8?u=localhost&p=9f7cb373f6c1e15ba57b53bf99f58ca51f768afbf968cdbb8b21d0e977eb9dae
-
-#EXTINF:3 group-title="🇵🇾Tigo Sports" tvg-id="localhost/tigo3" tvg-logo="https://cdn.latam.tivoservice.com/images/static/logos/112x32/579.png" provider="localhost" provider-logo="" provider-type="iptv",TIGO3 24/7
-https://localhost.apppelis.me/stream/localhost/tigo3/master.m3u8?u=localhost&p=9f7cb373f6c1e15ba57b53bf99f58ca51f768afbf968cdbb8b21d0e977eb9dae
-
 
 
 #EXTINF:-1 tvg-id="channel-id" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCV8ylO8tcnV_u96yTcp4SS100-FKMfi42Dw&s" group-title="🇵🇾Tigo Sports", Tigo Sports 1
