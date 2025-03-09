@@ -1369,64 +1369,10 @@ https://live.vrtcdn.be/groupc/live/8edf3bdf-7db3-41c3-a318-72cb7f82de66/live.ism
 #KODIPROP:inputstream.adaptive.license_key=b09d157d18ab51b9923a3d5abdeefd52:5a29bb3c705edea6941a5b1d575ac316
 https://director.streaming.telia.com/tvm-packager-prod/group2/61a4859b79019af4abf1009d/manifest.mpd?adap=default
 
-#EXTINF:-1 tvg-id="espn4br" tvg-logo="" group-title="PREMIER Y LA LIGA", espn4br
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=c70b4ceebfff58c3044951165f375d5c:e4d8870b7ec6a2fc594b42bc301c0f16
-https://castway.ittv.com.br/ESPN_4/index.mpd
-
-#EXTINF:-1 tvg-id="espnbr" tvg-logo="" group-title="PREMIER Y LA LIGA", espnbr
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=d2147ddefd9c9bf13ed6a7b720738013:528cc2b3fae76240e407260764e1e45d
-https://castway.ittv.com.br/ESPN_BRASIL/index.mpd
-
-#EXTINF:-1 tvg-id="espn3br" tvg-logo="" group-title="PREMIER Y LA LIGA", espn3br
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=63898a382b1b36a52e8a10d085b12100:f964e7b204d0b9fb4b3d54b7c41e3872
-https://castway.ittv.com.br/ESPN_MAIS/index.mpd
-
-#EXTINF:-1 tvg-id="espn2br" tvg-logo="" group-title="PREMIER Y LA LIGA", espn2br
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=af3895f1a5482d19682534c6a4917dbe:b0bddcea072725faa0c3e83c91f56824
-https://castway.ittv.com.br/ESPN_INTERNACIONAL/index.mpd
-
-#EXTINF:-1 tvg-id="arenasports1" tvg-logo="" group-title="PREMIER Y LA LIGA", arenasports1
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=c18b6aa739be4c0b774605fcfb5d6b68:e41c3a6f7532b2e3a828d9580124c89d
-https://webtvstream.bhtelecom.ba/hls6/arena1.mpd
-
-#EXTINF:-1 tvg-id="arenasports4" tvg-logo="" group-title="PREMIER Y LA LIGA", arenasports4
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=c18b6aa739be4c0b774605fcfb5d6b68:e41c3a6f7532b2e3a828d9580124c89d
-https://webtvstream.bhtelecom.ba/hls6/arena4.mpd
-
-#EXTINF:-1 tvg-id="NRK1_NO" tvg-logo="" group-title="PREMIER Y LA LIGA", NRK1_NO
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=01010101010101010101010101010101:01010101010101010101010101010101
-https://rikstv-live-scalstrm.telenorcdn.net/live/rikstv/64393b4f1dbc891fd41f5242/manifest.mpd
-
-#EXTINF:-1 tvg-id="BHT1_BH" tvg-logo="" group-title="PREMIER Y LA LIGA", BHT1_BH
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=c18b6aa739be4c0b774605fcfb5d6b68:e41c3a6f7532b2e3a828d9580124c89d
-https://webtvstream.bhtelecom.ba/hls19/bht1.mpd
-
-#EXTINF:-1 tvg-id="LAUNE_BE" tvg-logo="" group-title="PREMIER Y LA LIGA", LAUNE_BE
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=1a8315e4b64c4e638dc24d93134b9b2d:2821b54058fb3adc9c6252c631aef9e5
-https://daiconnect.com/live/dash/rtbf/laune-premium-drm-2/.mpd?t=2023-03-28T15%3A15%3A00.000&USrGDPRC=CPpVcwAPpVcwAAHABBENC9CsAP_AAAAAAAIgF5wFAAKgAXABAACoAFoAMgAaABFACYAE8AKUAWwBcADaAIAAQkA_QD-AIGAUgA_YC8wAAAEhIAMAAQSnDQAYAAglOIgAwABBKcVABgACCU4yADAAEEpx0AGAAIJTkIAMAAQSnJQAYAAglOUgAwABBKcA.f_gAAAAAAAAA&UGDPR=1&DAdID=e76997ff-4695-4a78-9bb8-488e1631872a&requestuid=742b0983-cd7c-11ed-961f-a2691158f87a
-
-#EXTINF:-1 tvg-id="CHANNEL_4_ENG" tvg-logo="" group-title="PREMIER Y LA LIGA", CHANNEL_4_ENG
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=d56ff9db826b4a41af9dbd0234c31116:ac6eaee980dff46e15670004663132a9
-https://wp2-obc1112-live-ch-prod.prod.cdn.dmdsdp.com/dash/SV09211/manifest.mpd
-
-#EXTINF:-1 tvg-id="TV2_Direkte_NO" tvg-logo="" group-title="PREMIER Y LA LIGA", TV2_Direkte_NO
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=bfb0134de69d76d25b5b4b202df11431:025915bd3062c4bde44a13916c5bfefe
-https://aws-appeartv-cdn.rikstv.no/rikstv/1/11/dash/TV2_HD/manifest.mpd?version=1&adap=no_dolby&RikstvAssetId=rikstv_5711
 
 #EXTINF:-1 tvg-id="NOVA2_CZ" tvg-logo="" group-title="PREMIER Y LA LIGA", NOVA2_CZ
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=11223344556677889900112233445566:11223344556677889900112233445566
+#KODIPROP:inputstream.adaptive.license_key=11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d
 https://dash2.antik.sk/stream/nvidia_nova_sport2/playlist_cbcs.mpd
 
 #EXTINF:-1 tvg-id="nova1" tvg-logo="" group-title="PREMIER Y LA LIGA", nova1
@@ -1505,3 +1451,7 @@ https://mag03.tvx.prd.tv.odido.nl/wh7f454c46tw1024019879_757686866/PLTV/86/224/3
 #KODIPROP:inputstream.adaptive.license_key=ce7ab3022e753307997f58afe001bac4:72d631a66e635c60829a0fe7705516c1
 https://fsly.stream.peacocktv.com/Content/CMAF_OL1-CTR-4s-v2/Live/channel(kvea)/master.mpd
 
+#EXTINF:-1 tvg-id="ziggo6" tvg-logo="" group-title="PREMIER Y LA LIGA", DAZN 1
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=44dd9cd370b08a868ead115fe84ecfde:bff19ab0a51cf14e848389b152913fd0
+https://ottb.live.cf.ww.aiv-cdn.net/dub-nitro/live/clients/dash/enc/bmnelo5c7a/out/v1/3ce2cdc4589f46189322bd3717c77957/cenc.mpd
