@@ -1356,6 +1356,12 @@ https://a129aivottlinear-a.akamaihd.net/OTTB/dub-nitro/live/clients/dash/enc/0wo
 #KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","kid":"t3DVtLtrWU2vmFhFqumqXw","k":"sMtG0tMc8ES8c9tx6YZfbw"},{"kty":"oct","kid":"DJAKfq4Al-CXcUG2jJv_xA","k":"-lNObUjsz5BaRJBRpeKAyA"}],"type":"temporary"}
 https://a122aivottlinear-a.akamaihd.net/OTTB/fra-nitro/live/clients/dash/enc/k2dcwnlpgr/out/v1/0502dc73a24b43a79c042bf2d14f6b84/cenc.mpd
 
+#EXTINF:-1 tvg-id="daznlaliga2" tvg-logo="" group-title="PREMIER Y LA LIGA", DAZN 1 RIZE
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=8bcec6b31cc9edcb6768ab26548e22c3:e3c5b07328894c33734a4de6ae55a87f
+https://ac-003.live.p7s1video.net/63f8995e/t_003/dazn-fast-hd/cenc-default.mpd
+
+
 #EXTINF:-1 tvg-id="eurosport1" tvg-logo="" group-title="PREMIER Y LA LIGA", eurosport1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=8bea39bc61707784544e6ccd62c9d076:7139535aafe27b59dff555b7dc99eed0
