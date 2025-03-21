@@ -1471,3 +1471,26 @@ https://fsly.stream.peacocktv.com/Content/CMAF_OL1-CTR-4s-v2/Live/channel(kvea)/
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=44dd9cd370b08a868ead115fe84ecfde:bff19ab0a51cf14e848389b152913fd0
 https://ottb.live.cf.ww.aiv-cdn.net/dub-nitro/live/clients/dash/enc/bmnelo5c7a/out/v1/3ce2cdc4589f46189322bd3717c77957/cenc.mpd
+
+
+
+#EXTINF:-1 tvg-logo="https://telefullhd.com/imagenes2/sextreme.png" group-title="ADULTOS +18",SEXTREME
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=95bd64227acf458daf7886f803d0298e:79e28ee0ec58958bb666f9e53a0cd434
+https://cdn.cvattv.com.ar/live/c6eds/Sextreme/SA_Live_dash_enc/Sextreme.mpd
+
+#EXTINF:-1 tvg-logo="https://telefullhd.com/imagenes2/venus.png" group-title="ADULTOS +18",VENUS
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=34237d2ae6684ee7a011f5b9c7c43e6d:05d973d987915120e567880f50a422af
+https://chromecast.cvattv.com.ar/live/c6eds/Venus/SA_Live_dash_enc/Venus.mpd
+
+#EXTINF:-1 tvg-logo="https://telefullhd.com/imagenes/playboy.png" group-title="ADULTOS +18",PLAYBOY
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=8577d81eaf33436d9f1e482360685a7c:f608a0ac703cfaaf9442574d9a2b87fb
+https://chromecast.cvattv.com.ar/live/c6eds/Playboy/SA_Live_dash_enc/Playboy.mpd
+
+#EXTINF:-1 tvg-logo="https://iptvmate.net/blog/wp-content/uploads/2024/04/mycam.png" group-title="ADULTOS +18",MYCAM1
+https://cdn.adultiptv.net/anal.m3u8
+
+#EXTINF:-1 tvg-logo="https://iptvmate.net/blog/wp-content/uploads/2024/04/mycam.png" group-title="ADULTOS +18",MYCAM2
+https://cdn.adultiptv.net/bigass.m3u8
