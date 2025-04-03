@@ -5,7 +5,7 @@
 #EXTINF:-1 tvg-id="channel-id" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCV8ylO8tcnV_u96yTcp4SS100-FKMfi42Dw&s" group-title="🇵🇾Tigo Sports", Tigo Sports 1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=1c62a216a5fe423f959cb1ca02f62d83:54f2fdc83c1da33cd9269bf21e08218c
-https://sam-py-edge04.tigo.com.py/ccur-session/01_3508407031/out/v1/25ca218d53194065bedf6d998ace462e/index.mpd?|referer=https://www.tigosports.com.py/|origin=https://www.tigosports.com.py
+https://sam-py-edge04.tigo.com.py/ccur-session/01_3508407031/out/v1/25ca218d53194065bedf6d998ace462e/index.mpd
 
 #EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCV8ylO8tcnV_u96yTcp4SS100-FKMfi42Dw&s" group-title="🇵🇾Tigo Sports", Tigo Sports 2
 #KODIPROP:inputstream.adaptive.license_type=clearkey
