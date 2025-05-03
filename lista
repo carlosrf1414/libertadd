@@ -2,10 +2,7 @@
 #EXTM3U url-tvg="https://www.open-epg.com/files/argentina2.xml.gz"
 
 
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key={"b52a7fa91fb031a3d6f2a505414b6fcd":"a655a22f9c0a66574b5d95dee212fbf9"}
-#EXTINF:-1 tvg-logo="https://cdn.latam.tivoservice.com/images/static/logos//112x32/563.png" group-title="DEPORTES PARAGUAY 24/7",TIGO SPORTS test
-https://sam-py-edge05.tigo.com.py/VMX4_widevine/rolling-buffer/TigoSportsHD/TigoSportsHD/transmux/index.mpd?ccur_fmt_type=fmp4
+
 
 
 
