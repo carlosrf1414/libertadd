@@ -6,8 +6,10 @@
 
 
 
+
 #EXTINF:-1 tvg-id="channel-id" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCV8ylO8tcnV_u96yTcp4SS100-FKMfi42Dw&s" group-title="🇵🇾Tigo Sports", Tigo Sports 1
-http://192.250.238.31:1234/stream/paraguay/tigo1/master.m3u8?u=admin&p=9f7cb373f6c1e15ba57b53bf99f58ca51f768afbf968cdbb8b21d0e977eb9dae?|referer=https://iptv.digital-tv.net/
+#EXTVLCOPT:http-referer=https://iptv.digital-tv.net/
+http://192.250.238.31:1234/stream/paraguay/tigo1/master.m3u8?u=admin&p=9f7cb373f6c1e15ba57b53bf99f58ca51f768afbf968cdbb8b21d0e977eb9dae
 
 #EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCV8ylO8tcnV_u96yTcp4SS100-FKMfi42Dw&s" group-title="🇵🇾Tigo Sports", Tigo Sports 2
 #KODIPROP:inputstream.adaptive.license_type=clearkey
