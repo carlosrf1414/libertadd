@@ -1,0 +1,834 @@
+<!--
+README: Admin Panel for Firebase Realtime Database
+
+Setup:
+1. Create a Firebase project (https://console.firebase.google.com/).
+2. Enable Email/Password Authentication in Firebase Authentication.
+3. Create your database structure:
+   - "Admin" node: Stores admin details (email, isTeacher, limiteDemos, limiteUsuarios, name, phone).
+   - "usuarios" node: Stores user details (creacion, deviceID, email, idv, password, ultimoacceso, vencimiento).
+4. Set Firebase Realtime Database rules to restrict access by role (see code comments).
+5. Deploy this file to GitHub Pages.
+6. Set your Firebase config in the ENV section below.
+
+Features:
+- Role-based access (seller/super reseller).
+- Manage admins and users with credit system.
+- Real-time updates, validation, error handling, and responsive UI.
+- No <form onSubmit>; all actions via button clicks.
+
+Security:
+- All sensitive operations use Firebase Authentication.
+- Database rules must enforce role-based access.
+
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Panel de Administración</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- React & ReactDOM CDN -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <!-- Firebase CDN -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+  <!-- Toastify for feedback -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <style>
+    /* Custom scrollbar for tables */
+    ::-webkit-scrollbar { height: 8px; background: #f1f1f1; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+  </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+<div id="root"></div>
+<script type="text/javascript">
+/* =========================
+   ENVIRONMENT VARIABLES
+   =========================
+   Replace the values below with your Firebase project config.
+   For GitHub Pages, you can use a separate config.js file and import it, or edit here directly.
+*/
+const firebaseConfig = {
+  apiKey: "AIzaSyDKjEeCh8-4Bukh0CgJKS5RQlD_gh70FOc",
+  authDomain: "playtv-a8085.firebaseapp.com",
+  databaseURL: "https://playtv-a8085-default-rtdb.firebaseio.com",
+  projectId: "playtv-a8085",
+  storageBucket: "playtv-a8085.firebasestorage.app",
+  messagingSenderId: "887768250224",
+  appId: "1:887768250224:web:804417ad84193dfbce01b5",
+  measurementId: "G-1W4ZF0YGGJ"
+};
+
+/* =========================
+   FIREBASE INITIALIZATION
+   ========================= */
+firebase.initializeApp(FIREBASE_CONFIG);
+const auth = firebase.auth();
+const db = firebase.database();
+
+/* =========================
+   UTILITY FUNCTIONS
+   ========================= */
+function showToast(msg, type = "success") {
+  Toastify({
+    text: msg,
+    duration: 3000,
+    gravity: "top",
+    position: "right",
+    backgroundColor: type === "success" ? "#22c55e" : "#ef4444",
+    stopOnFocus: true,
+  }).showToast();
+}
+
+function formatDate(ts) {
+  if (!ts) return "";
+  const d = new Date(ts);
+  return d.toISOString().slice(0, 10);
+}
+
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function isPositiveInt(val) {
+  return /^\d+$/.test(val) && Number(val) > 0;
+}
+
+/* =========================
+   REACT COMPONENTS
+   ========================= */
+const { useState, useEffect, useRef } = React;
+
+function App() {
+  const [user, setUser] = useState(null);
+  const [adminProfile, setAdminProfile] = useState(null);
+  const [admins, setAdmins] = useState({});
+  const [usuarios, setUsuarios] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [tab, setTab] = useState("usuarios");
+  const [sort, setSort] = useState({ key: "name", asc: true });
+
+  // Auth state
+  useEffect(() => {
+    const unsub = auth.onAuthStateChanged(async (u) => {
+      setUser(u);
+      setLoading(false);
+      if (u) {
+        // Fetch admin profile
+        db.ref("Admin").orderByChild("email").equalTo(u.email).once("value", snap => {
+          const val = snap.val();
+          if (val) {
+            const key = Object.keys(val)[0];
+            setAdminProfile({ ...val[key], _id: key });
+          } else {
+            setAdminProfile(null);
+            showToast("No tienes permisos de administrador", "error");
+            auth.signOut();
+          }
+        });
+      } else {
+        setAdminProfile(null);
+      }
+    });
+    return () => unsub();
+  }, []);
+
+  // Real-time listeners
+  useEffect(() => {
+    if (!user) return;
+    const adminsRef = db.ref("Admin");
+    const usuariosRef = db.ref("usuarios");
+    adminsRef.on("value", snap => setAdmins(snap.val() || {}));
+    usuariosRef.on("value", snap => setUsuarios(snap.val() || {}));
+    return () => {
+      adminsRef.off();
+      usuariosRef.off();
+    };
+  }, [user]);
+
+  if (loading) return <Loader />;
+  if (!user) return <Login />;
+  if (!adminProfile) return <Loader text="Cargando perfil..." />;
+
+  return (
+    <div className="max-w-7xl mx-auto py-6 px-2">
+      <Header user={user} adminProfile={adminProfile} onLogout={() => auth.signOut()} />
+      <Nav tab={tab} setTab={setTab} adminProfile={adminProfile} />
+      <div className="mt-4">
+        {tab === "usuarios" && (
+          <UsuariosTable
+            usuarios={usuarios}
+            adminProfile={adminProfile}
+            admins={admins}
+            sort={sort}
+            setSort={setSort}
+          />
+        )}
+        {tab === "admins" && adminProfile.isTeacher && (
+          <AdminsTable
+            admins={admins}
+            adminProfile={adminProfile}
+            sort={sort}
+            setSort={setSort}
+          />
+        )}
+      </div>
+    </div>
+  );
+}
+
+function Loader({ text = "Cargando..." }) {
+  return (
+    <div className="flex flex-col items-center justify-center min-h-[60vh]">
+      <svg className="animate-spin h-8 w-8 text-blue-600 mb-2" fill="none" viewBox="0 0 24 24">
+        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+      </svg>
+      <span className="text-gray-700">{text}</span>
+    </div>
+  );
+}
+
+function Header({ user, adminProfile, onLogout }) {
+  return (
+    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 bg-white rounded-lg shadow px-4 py-3">
+      <div>
+        <h1 className="text-xl font-bold text-blue-700">Panel de Administración</h1>
+        <div className="text-sm text-gray-600">
+          Sesión: <span className="font-semibold">{user.email}</span> | Rol:{" "}
+          <span className="font-semibold">{adminProfile.isTeacher ? "Super Revendedor" : "Vendedor"}</span>
+        </div>
+      </div>
+      <button
+        className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded transition"
+        onClick={onLogout}
+      >
+        Cerrar sesión
+      </button>
+    </div>
+  );
+}
+
+function Nav({ tab, setTab, adminProfile }) {
+  return (
+    <nav className="flex gap-2 mt-4">
+      <button
+        className={`px-4 py-2 rounded ${tab === "usuarios" ? "bg-blue-600 text-white" : "bg-white text-blue-700 border"}`}
+        onClick={() => setTab("usuarios")}
+      >
+        Usuarios
+      </button>
+      {adminProfile.isTeacher && (
+        <button
+          className={`px-4 py-2 rounded ${tab === "admins" ? "bg-blue-600 text-white" : "bg-white text-blue-700 border"}`}
+          onClick={() => setTab("admins")}
+        >
+          Admins
+        </button>
+      )}
+    </nav>
+  );
+}
+
+/* =========================
+   LOGIN COMPONENT
+   ========================= */
+function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleLogin = async () => {
+    if (!isValidEmail(email)) return showToast("Email inválido", "error");
+    if (!password) return showToast("Contraseña requerida", "error");
+    setLoading(true);
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+      showToast("Sesión iniciada");
+    } catch (e) {
+      showToast("Error de autenticación", "error");
+    }
+    setLoading(false);
+  };
+
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      <div className="bg-white shadow rounded-lg p-8 w-full max-w-sm">
+        <h2 className="text-2xl font-bold mb-4 text-blue-700">Iniciar Sesión</h2>
+        <input
+          className="w-full mb-3 px-3 py-2 border rounded"
+          type="email"
+          placeholder="Correo electrónico"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+        />
+        <input
+          className="w-full mb-3 px-3 py-2 border rounded"
+          type="password"
+          placeholder="Contraseña"
+          value={password}
+          onChange={e => setPassword(e.target.value)}
+        />
+        <button
+          className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
+          onClick={handleLogin}
+          disabled={loading}
+        >
+          {loading ? "Entrando..." : "Entrar"}
+        </button>
+      </div>
+    </div>
+  );
+}
+
+/* =========================
+   USUARIOS TABLE COMPONENT
+   ========================= */
+function UsuariosTable({ usuarios, adminProfile, admins, sort, setSort }) {
+  const [showAdd, setShowAdd] = useState(false);
+  const [editUser, setEditUser] = useState(null);
+
+  // Filter users by seller if not super reseller
+  const filteredUsuarios = Object.entries(usuarios)
+    .filter(([id, u]) => adminProfile.isTeacher || u.adminId === adminProfile._id)
+    .map(([id, u]) => ({ ...u, _id: id }));
+
+  // Sorting
+  const sortedUsuarios = [...filteredUsuarios].sort((a, b) => {
+    const key = sort.key;
+    let vA = a[key] || "";
+    let vB = b[key] || "";
+    if (key === "vencimiento") {
+      vA = new Date(vA).getTime();
+      vB = new Date(vB).getTime();
+    }
+    if (vA < vB) return sort.asc ? -1 : 1;
+    if (vA > vB) return sort.asc ? 1 : -1;
+    return 0;
+  });
+
+  return (
+    <div>
+      <div className="flex justify-between items-center mb-2">
+        <h2 className="text-lg font-bold text-blue-700">Usuarios</h2>
+        <button
+          className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+          onClick={() => setShowAdd(true)}
+        >
+          + Nuevo Usuario
+        </button>
+      </div>
+      <div className="overflow-x-auto bg-white rounded shadow">
+        <table className="min-w-full text-sm">
+          <thead>
+            <tr>
+              <SortableTh label="Email" sortKey="email" sort={sort} setSort={setSort} />
+              <SortableTh label="IDV" sortKey="idv" sort={sort} setSort={setSort} />
+              <SortableTh label="Vencimiento" sortKey="vencimiento" sort={sort} setSort={setSort} />
+              <SortableTh label="Creación" sortKey="creacion" sort={sort} setSort={setSort} />
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {sortedUsuarios.map(u => (
+              <tr key={u._id} className="border-t">
+                <td>{u.email}</td>
+                <td>{u.idv}</td>
+                <td>{formatDate(u.vencimiento)}</td>
+                <td>{formatDate(u.creacion)}</td>
+                <td>
+                  <button
+                    className="text-blue-600 hover:underline mr-2"
+                    onClick={() => setEditUser(u)}
+                  >
+                    Editar
+                  </button>
+                  <button
+                    className="text-red-600 hover:underline"
+                    onClick={() => handleDeleteUser(u, adminProfile)}
+                  >
+                    Eliminar
+                  </button>
+                </td>
+              </tr>
+            ))}
+            {sortedUsuarios.length === 0 && (
+              <tr>
+                <td colSpan={5} className="text-center py-4 text-gray-500">Sin usuarios</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+      {showAdd && (
+        <UserModal
+          onClose={() => setShowAdd(false)}
+          adminProfile={adminProfile}
+          admins={admins}
+          usuarios={usuarios}
+        />
+      )}
+      {editUser && (
+        <UserModal
+          user={editUser}
+          onClose={() => setEditUser(null)}
+          adminProfile={adminProfile}
+          admins={admins}
+          usuarios={usuarios}
+        />
+      )}
+    </div>
+  );
+}
+
+/* =========================
+   ADMINS TABLE COMPONENT
+   ========================= */
+function AdminsTable({ admins, adminProfile, sort, setSort }) {
+  const [showAdd, setShowAdd] = useState(false);
+  const [editAdmin, setEditAdmin] = useState(null);
+
+  // Only super resellers can see this
+  const sortedAdmins = Object.entries(admins)
+    .filter(([id, a]) => !a.isTeacher) // Only sellers
+    .map(([id, a]) => ({ ...a, _id: id }))
+    .sort((a, b) => {
+      const key = sort.key;
+      let vA = a[key] || "";
+      let vB = b[key] || "";
+      if (vA < vB) return sort.asc ? -1 : 1;
+      if (vA > vB) return sort.asc ? 1 : -1;
+      return 0;
+    });
+
+  return (
+    <div>
+      <div className="flex justify-between items-center mb-2">
+        <h2 className="text-lg font-bold text-blue-700">Vendedores</h2>
+        <button
+          className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+          onClick={() => setShowAdd(true)}
+        >
+          + Nuevo Vendedor
+        </button>
+      </div>
+      <div className="overflow-x-auto bg-white rounded shadow">
+        <table className="min-w-full text-sm">
+          <thead>
+            <tr>
+              <SortableTh label="Nombre" sortKey="name" sort={sort} setSort={setSort} />
+              <SortableTh label="Email" sortKey="email" sort={sort} setSort={setSort} />
+              <SortableTh label="Créditos" sortKey="limiteUsuarios" sort={sort} setSort={setSort} />
+              <SortableTh label="Demos" sortKey="limiteDemos" sort={sort} setSort={setSort} />
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {sortedAdmins.map(a => (
+              <tr key={a._id} className="border-t">
+                <td>{a.name}</td>
+                <td>{a.email}</td>
+                <td>{a.limiteUsuarios}</td>
+                <td>{a.limiteDemos}</td>
+                <td>
+                  <button
+                    className="text-blue-600 hover:underline mr-2"
+                    onClick={() => setEditAdmin(a)}
+                  >
+                    Editar
+                  </button>
+                  <button
+                    className="text-red-600 hover:underline"
+                    onClick={() => handleDeleteAdmin(a, adminProfile)}
+                  >
+                    Eliminar
+                  </button>
+                </td>
+              </tr>
+            ))}
+            {sortedAdmins.length === 0 && (
+              <tr>
+                <td colSpan={5} className="text-center py-4 text-gray-500">Sin vendedores</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+      {showAdd && (
+        <AdminModal
+          onClose={() => setShowAdd(false)}
+          adminProfile={adminProfile}
+        />
+      )}
+      {editAdmin && (
+        <AdminModal
+          admin={editAdmin}
+          onClose={() => setEditAdmin(null)}
+          adminProfile={adminProfile}
+        />
+      )}
+    </div>
+  );
+}
+
+/* =========================
+   SORTABLE TABLE HEADER
+   ========================= */
+function SortableTh({ label, sortKey, sort, setSort }) {
+  return (
+    <th
+      className="cursor-pointer select-none"
+      onClick={() => setSort(s => ({
+        key: sortKey,
+        asc: s.key === sortKey ? !s.asc : true
+      }))}
+    >
+      {label}
+      {sort.key === sortKey && (sort.asc ? " ▲" : " ▼")}
+    </th>
+  );
+}
+
+/* =========================
+   USER MODAL (ADD/EDIT)
+   ========================= */
+function UserModal({ user, onClose, adminProfile, admins, usuarios }) {
+  const isEdit = !!user;
+  const [email, setEmail] = useState(user?.email || "");
+  const [password, setPassword] = useState("");
+  const [vencimiento, setVencimiento] = useState(user ? formatDate(user.vencimiento) : "");
+  const [idv, setIdv] = useState(user?.idv || "");
+  const [loading, setLoading] = useState(false);
+
+  const handleSave = async () => {
+    if (!isValidEmail(email)) return showToast("Email inválido", "error");
+    if (!isEdit && !password) return showToast("Contraseña requerida", "error");
+    if (!vencimiento || isNaN(Date.parse(vencimiento))) return showToast("Fecha de vencimiento inválida", "error");
+    if (!idv) return showToast("IDV requerido", "error");
+
+    setLoading(true);
+    try {
+      if (isEdit) {
+        // Edit user in DB
+        await db.ref("usuarios/" + user._id).update({
+          email, idv, vencimiento: new Date(vencimiento).getTime()
+        });
+        if (password) {
+          // Update password in Auth (must be done by admin)
+          await updateUserPasswordByEmail(email, password);
+        }
+        showToast("Usuario actualizado");
+      } else {
+        // Check credit
+        const used = Object.values(usuarios).filter(u => u.adminId === adminProfile._id).length;
+        if (!adminProfile.isTeacher && used >= Number(adminProfile.limiteUsuarios)) {
+          showToast("Sin créditos disponibles", "error");
+          setLoading(false);
+          return;
+        }
+        // Create user in Auth
+        const userCred = await createUserInAuth(email, password);
+        // Add to DB
+        const newUser = {
+          email,
+          idv,
+          creacion: Date.now(),
+          vencimiento: new Date(vencimiento).getTime(),
+          adminId: adminProfile._id,
+          deviceID: "",
+          password: "",
+          ultimoacceso: ""
+        };
+        await db.ref("usuarios").push(newUser);
+        showToast("Usuario creado");
+      }
+      onClose();
+    } catch (e) {
+      showToast("Error: " + (e.message || e), "error");
+    }
+    setLoading(false);
+  };
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center z-50">
+      <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
+        <h3 className="text-lg font-bold mb-4">{isEdit ? "Editar Usuario" : "Nuevo Usuario"}</h3>
+        <input
+          className="w-full mb-3 px-3 py-2 border rounded"
+          type="email"
+          placeholder="Correo electrónico"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          disabled={isEdit}
+        />
+        <input
+          className="w-full mb-3 px-3 py-2 border rounded"
+          type="text"
+          placeholder="IDV"
+          value={idv}
+          onChange={e => setIdv(e.target.value)}
+        />
+        <input
+          className="w-full mb-3 px-3 py-2 border rounded"
+          type="date"
+          placeholder="Vencimiento"
+          value={vencimiento}
+          onChange={e => setVencimiento(e.target.value)}
+        />
+        {!isEdit && (
+          <input
+            className="w-full mb-3 px-3 py-2 border rounded"
+            type="password"
+            placeholder="Contraseña"
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+          />
+        )}
+        {isEdit && (
+          <input
+            className="w-full mb-3 px-3 py-2 border rounded"
+            type="password"
+            placeholder="Nueva contraseña (opcional)"
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+          />
+        )}
+        <div className="flex justify-end gap-2">
+          <button
+            className="px-4 py-2 rounded bg-gray-300 hover:bg-gray-400"
+            onClick={onClose}
+            disabled={loading}
+          >
+            Cancelar
+          </button>
+          <button
+            className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700"
+            onClick={handleSave}
+            disabled={loading}
+          >
+            {loading ? "Guardando..." : "Guardar"}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* =========================
+   ADMIN MODAL (ADD/EDIT)
+   ========================= */
+function AdminModal({ admin, onClose, adminProfile }) {
+  const isEdit = !!admin;
+  const [email, setEmail] = useState(admin?.email || "");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState(admin?.name || "");
+  const [phone, setPhone] = useState(admin?.phone || "");
+  const [limiteUsuarios, setLimiteUsuarios] = useState(admin?.limiteUsuarios || "0");
+  const [limiteDemos, setLimiteDemos] = useState(admin?.limiteDemos || "0");
+  const [loading, setLoading] = useState(false);
+
+  const handleSave = async () => {
+    if (!isValidEmail(email)) return showToast("Email inválido", "error");
+    if (!isEdit && !password) return showToast("Contraseña requerida", "error");
+    if (!name) return showToast("Nombre requerido", "error");
+    if (!isPositiveInt(limiteUsuarios)) return showToast("Créditos inválidos", "error");
+    if (!isPositiveInt(limiteDemos)) return showToast("Demos inválidos", "error");
+
+    setLoading(true);
+    try {
+      if (isEdit) {
+        await db.ref("Admin/" + admin._id).update({
+          name, phone, limiteUsuarios: Number(limiteUsuarios), limiteDemos: Number(limiteDemos)
+        });
+        if (password) {
+          await updateUserPasswordByEmail(email, password);
+        }
+        showToast("Vendedor actualizado");
+      } else {
+        // Create in Auth
+        await createUserInAuth(email, password);
+        // Add to DB
+        const newAdmin = {
+          email,
+          name,
+          phone,
+          limiteUsuarios: Number(limiteUsuarios),
+          limiteDemos: Number(limiteDemos),
+          isTeacher: false
+        };
+        await db.ref("Admin").push(newAdmin);
+        showToast("Vendedor creado");
+      }
+      onClose();
+    } catch (e) {
+      showToast("Error: " + (e.message || e), "error");
+    }
+    setLoading(false);
+  };
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center z-50">
+      <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
+        <h3 className="text-lg font-bold mb-4">{isEdit ? "Editar Vendedor" : "Nuevo Vendedor"}</h3>
+        <input
+          className="w-full mb-3 px-3 py-2 border rounded"
+          type="email"
+          placeholder="Correo electrónico"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          disabled={isEdit}
+        />
+        <input
+          className="w-full mb-3 px-3 py-2 border rounded"
+          type="text"
+          placeholder="Nombre"
+          value={name}
+          onChange={e => setName(e.target.value)}
+        />
+        <input
+          className="w-full mb-3 px-3 py-2 border rounded"
+          type="text"
+          placeholder="Teléfono"
+          value={phone}
+          onChange={e => setPhone(e.target.value)}
+        />
+        <input
+          className="w-full mb-3 px-3 py-2 border rounded"
+          type="number"
+          min="0"
+          placeholder="Créditos"
+          value={limiteUsuarios}
+          onChange={e => setLimiteUsuarios(e.target.value)}
+        />
+        <input
+          className="w-full mb-3 px-3 py-2 border rounded"
+          type="number"
+          min="0"
+          placeholder="Demos"
+          value={limiteDemos}
+          onChange={e => setLimiteDemos(e.target.value)}
+        />
+        {!isEdit && (
+          <input
+            className="w-full mb-3 px-3 py-2 border rounded"
+            type="password"
+            placeholder="Contraseña"
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+          />
+        )}
+        {isEdit && (
+          <input
+            className="w-full mb-3 px-3 py-2 border rounded"
+            type="password"
+            placeholder="Nueva contraseña (opcional)"
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+          />
+        )}
+        <div className="flex justify-end gap-2">
+          <button
+            className="px-4 py-2 rounded bg-gray-300 hover:bg-gray-400"
+            onClick={onClose}
+            disabled={loading}
+          >
+            Cancelar
+          </button>
+          <button
+            className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700"
+            onClick={handleSave}
+            disabled={loading}
+          >
+            {loading ? "Guardando..." : "Guardar"}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* =========================
+   DELETE HANDLERS
+   ========================= */
+async function handleDeleteUser(user, adminProfile) {
+  if (!window.confirm("¿Eliminar este usuario?")) return;
+  try {
+    await db.ref("usuarios/" + user._id).remove();
+    showToast("Usuario eliminado");
+    // Optionally: Remove from Auth (not possible from client for other users)
+  } catch (e) {
+    showToast("Error al eliminar usuario", "error");
+  }
+}
+
+async function handleDeleteAdmin(admin, adminProfile) {
+  if (!window.confirm("¿Eliminar este vendedor?")) return;
+  try {
+    await db.ref("Admin/" + admin._id).remove();
+    showToast("Vendedor eliminado");
+    // Optionally: Remove from Auth (not possible from client for other users)
+  } catch (e) {
+    showToast("Error al eliminar vendedor", "error");
+  }
+}
+
+/* =========================
+   FIREBASE AUTH HELPERS
+   =========================
+   Note: Creating users in Auth as admin is not possible from client-side only.
+   For demo, this uses the current session to create users (must be signed in as a privileged account).
+   For production, use Firebase Admin SDK on server or Cloud Functions.
+*/
+async function createUserInAuth(email, password) {
+  // This will fail if not allowed by Firebase rules or if not signed in as admin
+  // For GitHub Pages, you must create users manually in Auth or use a privileged account
+  try {
+    return await auth.createUserWithEmailAndPassword(email, password);
+  } catch (e) {
+    if (e.code === "auth/email-already-in-use") {
+      showToast("El email ya está registrado", "error");
+    }
+    throw e;
+  }
+}
+
+async function updateUserPasswordByEmail(email, newPassword) {
+  // Only possible for current user; for others, use Admin SDK
+  // Here, we prompt the user to reset password manually
+  showToast("Para cambiar la contraseña, usa la función de restablecer contraseña en Firebase Auth.", "error");
+}
+
+/* =========================
+   RENDER APP
+   ========================= */
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+
+/* =========================
+   DATABASE RULES (EXAMPLE)
+   =========================
+   {
+     "rules": {
+       "Admin": {
+         ".read": "auth != null && root.child('Admin').child(auth.uid).exists()",
+         ".write": "auth != null && root.child('Admin').child(auth.uid).child('isTeacher').val() === true"
+       },
+       "usuarios": {
+         ".read": "auth != null",
+         "$uid": {
+           ".write": "auth != null && (root.child('Admin').child(auth.uid).child('isTeacher').val() === true || root.child('usuarios').child($uid).child('adminId').val() === auth.uid)"
+         }
+       }
+     }
+   }
+   ========================= */
+</script>
+</body>
+</html>
